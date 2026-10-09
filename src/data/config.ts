@@ -2,15 +2,13 @@ import type { AppConfig } from '../types';
 
 /**
  * ============================================================================
- *  A LITTLE WORLD OF YOU - CENTRAL CONFIGURATION FILE
- * ============================================================================
- *  Contains ALL 38+ unique uploaded photographs of your friend!
+ *  A LITTLE WORLD OF TIFRUU - CENTRAL CONFIGURATION FILE
  * ============================================================================
  */
 
 export const config: AppConfig = {
-  friendName: 'Bestie',
-  websiteTitle: 'A Little World of You ✨',
+  friendName: 'Tifruu',
+  websiteTitle: 'A Little World of Tifruu ✨',
   subtitle: 'A tiny corner of the internet, made just for you.',
   
   // Main portrait displayed in the hero section
@@ -44,7 +42,7 @@ export const config: AppConfig = {
     },
   ],
 
-  // Full Gallery photos (/gallery) - ALL 38+ UNIQUE UPLOADS
+  // Full Gallery photos (/gallery) - ALL UNIQUE UPLOADS
   galleryPhotos: [
     { id: 'g-main', url: '/images/main_portrait.jpg', caption: 'Radiant outdoor portrait in golden sunlight', date: 'Golden Hour', location: 'Garden Haven', rotation: -3, category: 'Portraits' },
     { id: 'g-1', url: '/images/photo_1.jpg', caption: 'Cozy moments and warm smiles', date: 'Happy Days', location: 'Sweet Spot', rotation: 2, category: 'Cozy' },
@@ -55,7 +53,7 @@ export const config: AppConfig = {
     { id: 'g-6', url: '/images/photo_6.jpg', caption: 'Bright smiles that light up the day', date: 'Summer Days', location: 'Sunny Terrace', rotation: -3, category: 'Sweet' },
     { id: 'g-7', url: '/images/photo_7.jpg', caption: 'Nature walks under lush green trees', date: 'Nature Trail', location: 'Greenwood Park', rotation: 4, category: 'Outdoors' },
     { id: 'g-8', url: '/images/photo_8.jpg', caption: 'Unforgettable adventures and laughter', date: 'Day Trip', location: 'Cozy Spot', rotation: -2, category: 'Memories' },
-    { id: 'g-9', url: '/images/photo_9.jpg', caption: 'Serene aesthetics and peaceful vibes', date: 'Chill Afternoon', location: 'Favorite Cafe', rotation: 3, category: 'Aesthetic' },
+    { id: 'g-9', url: '/images/photo_9.jpg', caption: 'Serene aesthetics and peaceful vibes', date: 'Chill Afternoon', location: 'Favorite Spot', rotation: 3, category: 'Aesthetic' },
     { id: 'g-10', url: '/images/photo_10.jpg', caption: 'Sweet candid moments', date: 'Golden Hours', location: 'Outdoor Lounge', rotation: -3, category: 'Portraits' },
     { id: 'g-11', url: '/images/photo_11.jpg', caption: 'Warm breeze and cheerful smiles', date: 'Sunny Vibe', location: 'Garden Fence', rotation: 2, category: 'Outdoors' },
     { id: 'g-12', url: '/images/photo_12.jpg', caption: 'Elegant candid captures', date: 'Special Memories', location: 'Highland Meadow', rotation: -4, category: 'Portraits' },
@@ -72,13 +70,13 @@ export const config: AppConfig = {
     { id: 'g-23', url: '/images/photo_23.jpg', caption: 'Effortless elegance outdoors', date: 'Golden Glow', location: 'Lounge Deck', rotation: 4, category: 'Portraits' },
     { id: 'g-24', url: '/images/photo_24.jpg', caption: 'Peaceful afternoon sunsets', date: 'Twilight Vibe', location: 'Panorama Deck', rotation: -3, category: 'Cozy' },
     { id: 'g-25', url: '/images/photo_25.jpg', caption: 'Sparkling eyes and genuine smiles', date: 'Sweet Moments', location: 'City Walk', rotation: 3, category: 'Portraits' },
-    { id: 'g-26', url: '/images/photo_26.jpg', caption: 'Pure joy shared together', date: 'Friendship Days', location: 'Little Bakery', rotation: -2, category: 'Memories' },
+    { id: 'g-26', url: '/images/photo_26.jpg', caption: 'Pure joy shared together', date: 'Friendship Days', location: 'Little Spot', rotation: -2, category: 'Memories' },
     { id: 'g-27', url: '/images/photo_27.jpg', caption: 'Warm ambient glow and cute poses', date: 'Evening Magic', location: 'Lantern Garden', rotation: 4, category: 'Aesthetic' },
     { id: 'g-28', url: '/images/photo_28.jpg', caption: 'Serene moments surrounded by green', date: 'Quiet Retreat', location: 'Botanical Park', rotation: -3, category: 'Outdoors' },
     { id: 'g-29', url: '/images/photo_29.jpg', caption: 'Spontaneous and fun poses', date: 'Adventure Day', location: 'Sunny Hill', rotation: 3, category: 'Sweet' },
     { id: 'g-30', url: '/images/photo_30.jpg', caption: 'Sun-kissed aesthetic shots', date: 'Golden Hour', location: 'Patio Haven', rotation: -2, category: 'Portraits' },
     { id: 'g-31', url: '/images/photo_31.jpg', caption: 'Nature exploration and fresh air', date: 'Forest Walk', location: 'Greenwood Trail', rotation: 4, category: 'Outdoors' },
-    { id: 'g-32', url: '/images/photo_32.jpg', caption: 'Heartwarming laughter and good vibes', date: 'Best Times', location: 'Coffee Shop', rotation: -3, category: 'Cozy' },
+    { id: 'g-32', url: '/images/photo_32.jpg', caption: 'Heartwarming laughter and good vibes', date: 'Best Times', location: 'Favorite Spot', rotation: -3, category: 'Cozy' },
     { id: 'g-33', url: '/images/photo_33.jpg', caption: 'Glowing smiles in warm daylight', date: 'Summer Sunshine', location: 'Courtyard', rotation: 3, category: 'Portraits' },
     { id: 'g-34', url: '/images/photo_34.jpg', caption: 'Every picture tells a happy story', date: 'Memorable Day', location: 'Backyard', rotation: -2, category: 'Memories' },
     { id: 'g-35', url: '/images/photo_35.jpg', caption: 'Cute scrapbook polaroids', date: 'Lovely Vibe', location: 'Meadow', rotation: 4, category: 'Aesthetic' },
@@ -97,15 +95,6 @@ export const config: AppConfig = {
       detailedText: 'You have a genuine, warm smile that makes everyone around you instantly feel comfortable and at ease. It is truly your superpower!',
       iconName: 'Smile',
       colorTheme: 'pink',
-    },
-    {
-      id: 'lt-2',
-      category: 'quirk',
-      title: 'The Cute Coffee Ritual',
-      shortDescription: 'The exact specific way you prepare your favorite drink.',
-      detailedText: 'Whether it is stirring milk precisely 3 times or needing that specific cozy mug, your little daily rituals are incredibly charming.',
-      iconName: 'Coffee',
-      colorTheme: 'cream',
     },
     {
       id: 'lt-3',
@@ -191,7 +180,7 @@ export const config: AppConfig = {
       id: 'msg-1',
       envelopeTitle: 'Open when you need a smile 💛',
       subtitle: 'A gentle reminder of how amazing you are.',
-      letterContent: `Hey there! 
+      letterContent: `Hey Tifruu! 
 
 Just in case nobody reminded you today: you are doing fantastic. Life gets busy, but your positivity and effort never go unnoticed. Take a deep breath, smile, and remember how bright you shine.
 
@@ -204,7 +193,7 @@ Whenever you need a pick-me-up, come back to your little world! ✨`,
       id: 'msg-2',
       envelopeTitle: 'Open when you are feeling tired 🍵',
       subtitle: 'Permission to rest and recharge.',
-      letterContent: `Dear friend,
+      letterContent: `Dear Tifruu,
 
 It is completely okay to pause, rest, and do absolutely nothing for a while. You don’t have to conquer the world every single day. Grab a warm cup of tea, wrap yourself in a soft blanket, and relax. 
 
@@ -217,7 +206,7 @@ You deserve all the peace and comfort in the world! 🌿`,
       id: 'msg-3',
       envelopeTitle: 'A little reminder for you 🌸',
       subtitle: 'Something I want you to always remember.',
-      letterContent: `Never forget how unique and wonderful you are. Your kindness inspires people around you, and your presence makes hard days so much lighter. 
+      letterContent: `Never forget how unique and wonderful you are, Tifruu. Your kindness inspires people around you, and your presence makes hard days so much lighter. 
 
 Thank you for being such an incredible person and a wonderful friend! 💖`,
       tag: 'Appreciation',
@@ -228,7 +217,7 @@ Thank you for being such an incredible person and a wonderful friend! 💖`,
       id: 'msg-4',
       envelopeTitle: 'Open when you need courage 🌟',
       subtitle: 'You are stronger than you think.',
-      letterContent: `Believe in yourself! You have overcome tough challenges before and you handled them with grace and strength. Whatever is on your mind right now, you’ve got this! 
+      letterContent: `Believe in yourself, Tifruu! You have overcome tough challenges before and you handled them with grace and strength. Whatever is on your mind right now, you’ve got this! 
 
 Cheering for you always! 📣⭐`,
       tag: 'Encouragement',
@@ -237,9 +226,9 @@ Cheering for you always! 📣⭐`,
     },
   ],
 
-  // Compliments for Fun Zone (/fun-zone)
+  // Compliments
   compliments: [
-    'Your smile literally lights up the room! ✨',
+    'Your smile literally lights up the room, Tifruu! ✨',
     'You have the kindest heart and best vibe. 🌸',
     'Everything is 100x more fun when you are around! 🎈',
     'You are genuinely one of a kind. 💖',
@@ -249,14 +238,14 @@ Cheering for you always! 📣⭐`,
     'You have a gift for making people feel heard and valued. 💌',
   ],
 
-  // Interactive Quiz (/fun-zone)
+  // Interactive Quiz
   quizQuestions: [
     {
       id: 1,
       question: 'What is your ultimate recipe for a perfect cozy day?',
       options: [
-        'Coffee, good books, and soft acoustic music 📖',
-        'Exploring cute cafes and taking polaroid pictures 📸',
+        'Good books and soft acoustic music 📖',
+        'Exploring cute spots and taking polaroid pictures 📸',
         'Stargazing with fairy lights and warm cocoa ✨',
         'All of the above combined into one magical day! 💖',
       ],
@@ -289,7 +278,7 @@ Cheering for you always! 📣⭐`,
     },
   ],
 
-  // Surprises for Fun Zone (/fun-zone)
+  // Surprises
   surprises: [
     {
       id: 'surp-1',
@@ -301,7 +290,7 @@ Cheering for you always! 📣⭐`,
     {
       id: 'surp-2',
       title: 'Cozy Snack Pass! 🍰',
-      message: 'You unlocked Surprise #2! You have been granted 1 free slice of strawberry cake and hot mocha! 🍓☕',
+      message: 'You unlocked Surprise #2! You have been granted 1 free slice of strawberry cake! 🍓🍰',
       imageUrl: '/images/photo_21.jpg',
       emoji: '🍰',
     },
@@ -317,11 +306,11 @@ Cheering for you always! 📣⭐`,
   // Secret Room (/secret)
   secretRoom: {
     teaserTitle: 'Psst... there is something special waiting for you 🤫',
-    teaserSubtitle: 'A hidden vault created just for you. Find 3 magical floating stars to unlock the secret!',
+    teaserSubtitle: 'A hidden vault created just for Tifruu. Find 3 magical floating stars to unlock the secret!',
     hintText: 'Click on the 3 glowing stars scattered on the card below to reveal your surprise!',
     starsToFind: 3,
     revealedTitle: 'You Unlocked the Secret Room! 🎉✨',
-    revealedMessage: `Congratulations! 💖
+    revealedMessage: `Congratulations Tifruu! 💖
 
 This little digital world was crafted with so much care and love just to bring a big smile to your face.
 
