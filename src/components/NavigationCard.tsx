@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Camera, Sparkles, Clock, Heart, Gamepad2, Lock, ArrowRight } from 'lucide-react';
+import { Camera, Sparkles, Clock, Heart, Lock, ArrowRight } from 'lucide-react';
 import styles from './NavigationCard.module.css';
 
 interface NavCardItem {
@@ -45,14 +45,6 @@ export const navCardItems: NavCardItem[] = [
     path: '/for-you',
     badge: 'Letters 💌',
     icon: <Heart size={26} />,
-  },
-  {
-    id: 'fun-zone',
-    title: 'Fun Zone',
-    description: 'Compliment machine, interactive quiz, and cute surprises.',
-    path: '/fun-zone',
-    badge: 'Games 🎮',
-    icon: <Gamepad2 size={26} />,
   },
   {
     id: 'secret',

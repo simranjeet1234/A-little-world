@@ -15,7 +15,6 @@ export const Navbar: React.FC = () => {
     { path: '/little-things', label: 'Little Things' },
     { path: '/memories', label: 'Memory Lane' },
     { path: '/for-you', label: 'For You' },
-    { path: '/fun-zone', label: 'Fun Zone' },
     { path: '/secret', label: 'Secret Room 🗝️' },
   ];
 
