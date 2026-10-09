@@ -3,20 +3,21 @@
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(255, 249, 245, 0.88);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(255, 249, 245, 0.92);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--border-subtle);
   z-index: 100;
   padding: 12px 24px;
 }
 
 .navContainer {
-  max-width: 1200px;
+  max-width: 1250px;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 16px;
 }
 
 .logo {
@@ -24,35 +25,35 @@
   align-items: center;
   gap: 8px;
   font-family: var(--font-heading);
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: var(--text-main);
   text-decoration: none;
+  white-space: nowrap;
   transition: transform var(--transition-fast);
 }
 
 .logo:hover {
-  transform: scale(1.03);
-}
-
-.logoSparkle {
-  color: var(--accent-pink);
+  transform: scale(1.02);
 }
 
 .navLinks {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 8px;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .navLink {
-  font-size: 0.95rem;
+  font-size: 0.88rem;
   font-weight: 600;
   color: var(--text-muted);
   text-decoration: none;
-  padding: 6px 14px;
+  padding: 6px 12px;
   border-radius: var(--radius-full);
+  white-space: nowrap;
   transition: all var(--transition-fast);
 }
 
@@ -71,6 +72,7 @@
   display: flex;
   align-items: center;
   gap: 12px;
+  flex-shrink: 0;
 }
 
 .mobileMenuBtn {
@@ -78,9 +80,12 @@
   padding: 8px;
   border-radius: var(--radius-sm);
   color: var(--text-main);
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }
 
-@media (max-width: 868px) {
+@media (max-width: 1024px) {
   .navLinks {
     display: none;
   }
@@ -95,11 +100,20 @@
     background: var(--bg-card);
     border-bottom: 1px solid var(--border-subtle);
     padding: 16px 24px;
-    gap: 12px;
+    gap: 8px;
     box-shadow: var(--shadow-lg);
+  }
+
+  .navLinksOpen .navLink {
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    padding: 10px 16px;
   }
   
   .mobileMenuBtn {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }

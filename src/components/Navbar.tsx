@@ -15,8 +15,8 @@ export const Navbar: React.FC = () => {
     { path: '/little-things', label: 'Little Things' },
     { path: '/memories', label: 'Memory Lane' },
     { path: '/for-you', label: 'For You' },
-    { path: '/secret', label: 'Secret Room 🗝️' },
     { path: '/fun-zone', label: 'Fun Zone 🎯' },
+    { path: '/secret', label: 'Secret Room 🗝️' },
   ];
 
   return (
@@ -26,24 +26,24 @@ export const Navbar: React.FC = () => {
           <span>{config.websiteTitle}</span>
         </Link>
 
-        <div className={styles.rightControls}>
-          <ul className={`${styles.navLinks} ${mobileMenuOpen ? styles.navLinksOpen : ''}`}>
-            {links.map((link) => {
-              const isActive = location.pathname === link.path;
-              return (
-                <li key={link.path}>
-                  <Link
-                    to={link.path}
-                    className={`${styles.navLink} ${isActive ? styles.activeNavLink : ''}`}
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
+        <ul className={`${styles.navLinks} ${mobileMenuOpen ? styles.navLinksOpen : ''}`}>
+          {links.map((link) => {
+            const isActive = location.pathname === link.path;
+            return (
+              <li key={link.path}>
+                <Link
+                  to={link.path}
+                  className={`${styles.navLink} ${isActive ? styles.activeNavLink : ''}`}
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
 
+        <div className={styles.rightControls}>
           <AudioPlayer />
 
           <button
