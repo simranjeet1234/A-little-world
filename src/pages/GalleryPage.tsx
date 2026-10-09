@@ -60,7 +60,35 @@ export const GalleryPage: React.FC = () => {
               onClick={() => setSelectedPhotoIndex(index)}
             >
               <div className={`washi-tape ${index % 2 === 0 ? 'tape-left' : 'tape-right'}`} />
-              <img src={photo.url} alt={photo.caption} className={styles.photoImg} />
+              {photo.isVideo || photo.url.toLowerCase().endsWith('.mp4') || photo.url.toLowerCase().endsWith('.mov') ? (
+                <div style={{ position: 'relative', width: '100%' }}>
+                  <video
+                    src={photo.url}
+                    muted
+                    loop
+                    autoPlay
+                    playsInline
+                    className={styles.photoImg}
+                    style={{ objectFit: 'cover' }}
+                  />
+                  <span style={{
+                    position: 'absolute',
+                    top: '8px',
+                    right: '8px',
+                    background: 'rgba(0,0,0,0.65)',
+                    color: '#fff',
+                    fontSize: '0.72rem',
+                    fontWeight: 700,
+                    padding: '3px 8px',
+                    borderRadius: '12px',
+                    backdropFilter: 'blur(4px)'
+                  }}>
+                    ▶ Video
+                  </span>
+                </div>
+              ) : (
+                <img src={photo.url} alt={photo.caption} className={styles.photoImg} />
+              )}
               <div className={styles.cardMeta}>
                 <div className={styles.cardCaption}>{photo.caption}</div>
                 <div className={styles.cardSub}>

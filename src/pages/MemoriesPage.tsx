@@ -44,20 +44,59 @@ export const MemoriesPage: React.FC = () => {
                   <div className={`washi-tape ${isRight ? 'tape-right' : 'tape-left'}`} />
 
                   {item.imageUrl && (
-                    <img
-                      src={item.imageUrl}
-                      alt={item.title}
-                      className={styles.photoImg}
-                      onClick={() =>
-                        setSelectedPhoto({
-                          id: item.id,
-                          url: item.imageUrl!,
-                          caption: item.title,
-                          date: item.date,
-                        })
-                      }
-                      style={{ cursor: 'pointer' }}
-                    />
+                    item.isVideo || item.imageUrl.toLowerCase().endsWith('.mp4') || item.imageUrl.toLowerCase().endsWith('.mov') ? (
+                      <div
+                        style={{ position: 'relative', cursor: 'pointer' }}
+                        onClick={() =>
+                          setSelectedPhoto({
+                            id: item.id,
+                            url: item.imageUrl!,
+                            caption: item.title,
+                            date: item.date,
+                            isVideo: true,
+                          })
+                        }
+                      >
+                        <video
+                          src={item.imageUrl}
+                          muted
+                          loop
+                          autoPlay
+                          playsInline
+                          className={styles.photoImg}
+                          style={{ objectFit: 'cover', width: '100%' }}
+                        />
+                        <span style={{
+                          position: 'absolute',
+                          top: '10px',
+                          right: '10px',
+                          background: 'rgba(0,0,0,0.65)',
+                          color: '#fff',
+                          fontSize: '0.75rem',
+                          fontWeight: 700,
+                          padding: '4px 10px',
+                          borderRadius: '12px',
+                          backdropFilter: 'blur(4px)'
+                        }}>
+                          ▶ Video Memory
+                        </span>
+                      </div>
+                    ) : (
+                      <img
+                        src={item.imageUrl}
+                        alt={item.title}
+                        className={styles.photoImg}
+                        onClick={() =>
+                          setSelectedPhoto({
+                            id: item.id,
+                            url: item.imageUrl!,
+                            caption: item.title,
+                            date: item.date,
+                          })
+                        }
+                        style={{ cursor: 'pointer' }}
+                      />
+                    )
                   )}
 
                   <span className={styles.dateTag}>{item.date}</span>

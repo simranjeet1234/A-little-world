@@ -6,6 +6,7 @@ export interface GalleryPhoto {
   location?: string;
   rotation?: number; // e.g. -3 to 3 deg for scrapbook look
   category?: string;
+  isVideo?: boolean;
 }
 
 export interface LittleThing {
@@ -26,6 +27,7 @@ export interface MemoryEntry {
   imageUrl?: string;
   sticker?: string;
   tag?: string;
+  isVideo?: boolean;
 }
 
 export interface PersonalMessage {

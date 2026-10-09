@@ -86,11 +86,23 @@ export const PhotoLightbox: React.FC<PhotoLightboxProps> = ({
             )}
 
             <div className={styles.imageWrapper}>
-              <img
-                src={photo.url}
-                alt={photo.caption}
-                className={styles.enlargedImg}
-              />
+              {photo.isVideo || photo.url.toLowerCase().endsWith('.mp4') || photo.url.toLowerCase().endsWith('.mov') ? (
+                <video
+                  src={photo.url}
+                  controls
+                  autoPlay
+                  loop
+                  playsInline
+                  className={styles.enlargedImg}
+                  style={{ maxHeight: '70vh', width: '100%', objectFit: 'contain' }}
+                />
+              ) : (
+                <img
+                  src={photo.url}
+                  alt={photo.caption}
+                  className={styles.enlargedImg}
+                />
+              )}
             </div>
 
             <div className={styles.metaInfo}>
