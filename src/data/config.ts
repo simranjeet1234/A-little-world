@@ -139,11 +139,11 @@ export const config: AppConfig = {
     {
       id: 'mem-1',
       date: 'Chapter 1',
-      title: 'The Day We First Met',
-      description: 'The start of an amazing friendship filled with endless laughter, shared secrets, and unforgettable moments.',
+      title: 'The Trip to the Mountains ⛰️',
+      description: 'An unforgettable getaway into the mountains, filled with breathtaking views, fresh air, and amazing memories together.',
       imageUrl: '/images/photo_17.jpg',
-      sticker: '🌸',
-      tag: 'Beginning',
+      sticker: '⛰️',
+      tag: 'Mountain Trip',
     },
     {
       id: 'mem-2',
