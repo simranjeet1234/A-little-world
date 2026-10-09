@@ -1,0 +1,36 @@
+.hero {
+  position: relative;
+  text-align: center;
+  padding: 40px 20px 20px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.headingWrapper {
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.title {
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  font-weight: 700;
+  color: var(--text-main);
+  text-shadow: 2px 2px 0px rgba(255, 204, 213, 0.6);
+  letter-spacing: -0.5px;
+}
+
+.subtitle {
+  font-size: clamp(1.05rem, 2.5vw, 1.35rem);
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto 30px auto;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.badgeHeader {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
