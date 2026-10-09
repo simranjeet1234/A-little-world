@@ -363,6 +363,6 @@ Never forget how special, appreciated, and loved you are every single day. Thank
     revealedImageUrl: '/images/photo_44.jpg',
   },
 
-  // Optional background ambient music path
-  audioUrl: '',
+  // Background ambient music path
+  audioUrl: '/music.mp3',
 };
