@@ -10,6 +10,7 @@ export const FunZonePage: React.FC = () => {
   const [attempts, setAttempts] = useState(0);
   const [showWinnerModal, setShowWinnerModal] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
+  const yesBtnRef = useRef<HTMLButtonElement>(null);
 
   const noButtonTexts = [
     'NO 🙈',
@@ -23,21 +24,65 @@ export const FunZonePage: React.FC = () => {
     'Nice try! ⚡',
   ];
 
-  const moveNoButton = () => {
-    if (!containerRef.current) return;
-    const rect = containerRef.current.getBoundingClientRect();
-    
-    // Calculate random position across the expanded buttonsArea arena
-    const buttonWidth = 140;
-    const buttonHeight = 45;
-    
-    const maxX = Math.max(rect.width - buttonWidth - 20, 20);
-    const maxY = Math.max(rect.height - buttonHeight - 20, 20);
-    
-    const randomX = Math.floor(Math.random() * maxX);
-    const randomY = Math.floor(Math.random() * maxY);
+  const moveNoButton = (e?: React.SyntheticEvent) => {
+    if (e) {
+      e.stopPropagation();
+      if ('preventDefault' in e && typeof e.preventDefault === 'function') {
+        e.preventDefault();
+      }
+    }
 
-    setNoPos({ x: randomX, y: randomY });
+    if (!containerRef.current) return;
+    const containerRect = containerRef.current.getBoundingClientRect();
+
+    // Get YES button bounding box relative to container + safety margin
+    let yesBox = {
+      left: containerRect.width / 2 - 80,
+      right: containerRect.width / 2 + 80,
+      top: containerRect.height / 2 - 40,
+      bottom: containerRect.height / 2 + 40,
+    };
+
+    if (yesBtnRef.current) {
+      const r = yesBtnRef.current.getBoundingClientRect();
+      const margin = 40; // 40px safety buffer around YES button so NO never overlaps it
+      yesBox = {
+        left: r.left - containerRect.left - margin,
+        right: r.right - containerRect.left + margin,
+        top: r.top - containerRect.top - margin,
+        bottom: r.bottom - containerRect.top + margin,
+      };
+    }
+
+    const noWidth = 140;
+    const noHeight = 45;
+    const maxX = Math.max(containerRect.width - noWidth - 15, 10);
+    const maxY = Math.max(containerRect.height - noHeight - 15, 10);
+
+    let newX = 0;
+    let newY = 0;
+    let attemptsCount = 0;
+    let isValid = false;
+
+    // Try up to 50 times to generate a coordinate that NEVER overlaps YES button
+    while (!isValid && attemptsCount < 50) {
+      attemptsCount++;
+      newX = Math.floor(Math.random() * maxX);
+      newY = Math.floor(Math.random() * maxY);
+
+      const noRight = newX + noWidth;
+      const noBottom = newY + noHeight;
+
+      // Check collision with YES box
+      const overlapsX = newX < yesBox.right && noRight > yesBox.left;
+      const overlapsY = newY < yesBox.bottom && noBottom > yesBox.top;
+
+      if (!(overlapsX && overlapsY)) {
+        isValid = true;
+      }
+    }
+
+    setNoPos({ x: newX, y: newY });
     setAttempts((prev) => prev + 1);
   };
 
@@ -101,6 +146,7 @@ export const FunZonePage: React.FC = () => {
           <div className={styles.buttonsArea} ref={containerRef}>
             {/* COMPACT YES BUTTON */}
             <motion.button
+              ref={yesBtnRef}
               className={styles.yesBtn}
               onClick={handleYesClick}
               whileHover={{ scale: 1.06 }}
@@ -109,7 +155,7 @@ export const FunZonePage: React.FC = () => {
               YES! 🔥😍
             </motion.button>
 
-            {/* EXPANDED RUNAWAY NO BUTTON */}
+            {/* EXPANDED RUNAWAY NO BUTTON (COLLISION PROTECTED) */}
             <button
               className={styles.noBtn}
               style={
