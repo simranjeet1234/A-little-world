@@ -19,18 +19,23 @@ export const FunZonePage: React.FC = () => {
     'Just click YES! 🔥',
     'No way! 🤭',
     'Simran is sexier! 🔥',
+    'Too slow! 💨',
+    'Nice try! ⚡',
   ];
 
   const moveNoButton = () => {
     if (!containerRef.current) return;
     const rect = containerRef.current.getBoundingClientRect();
     
-    // Calculate random padding-bound positions within the buttons container area
-    const maxX = rect.width - 120;
-    const maxY = rect.height - 60;
+    // Calculate random position across the expanded buttonsArea arena
+    const buttonWidth = 140;
+    const buttonHeight = 45;
     
-    const randomX = Math.floor(Math.random() * Math.max(maxX, 100));
-    const randomY = Math.floor(Math.random() * Math.max(maxY, 60));
+    const maxX = Math.max(rect.width - buttonWidth - 20, 20);
+    const maxY = Math.max(rect.height - buttonHeight - 20, 20);
+    
+    const randomX = Math.floor(Math.random() * maxX);
+    const randomY = Math.floor(Math.random() * maxY);
 
     setNoPos({ x: randomX, y: randomY });
     setAttempts((prev) => prev + 1);
@@ -41,8 +46,8 @@ export const FunZonePage: React.FC = () => {
 
     // Launch celebratory confetti burst
     confetti({
-      particleCount: 150,
-      spread: 100,
+      particleCount: 180,
+      spread: 110,
       origin: { y: 0.6 },
       colors: ['#ffd700', '#ff477e', '#7000ff', '#00f2fe', '#ff8c00'],
     });
@@ -50,18 +55,18 @@ export const FunZonePage: React.FC = () => {
     // Secondary burst
     setTimeout(() => {
       confetti({
-        particleCount: 100,
+        particleCount: 120,
         angle: 60,
-        spread: 70,
+        spread: 80,
         origin: { x: 0.1 },
       });
       confetti({
-        particleCount: 100,
+        particleCount: 120,
         angle: 120,
-        spread: 70,
+        spread: 80,
         origin: { x: 0.9 },
       });
-    }, 300);
+    }, 250);
   };
 
   const handlePlayAgain = () => {
@@ -94,17 +99,17 @@ export const FunZonePage: React.FC = () => {
           <p className={styles.subQuestion}>Be honest... if you can click the answer! 😜</p>
 
           <div className={styles.buttonsArea} ref={containerRef}>
-            {/* YES BUTTON */}
+            {/* COMPACT YES BUTTON */}
             <motion.button
               className={styles.yesBtn}
               onClick={handleYesClick}
-              whileHover={{ scale: 1.08 }}
+              whileHover={{ scale: 1.06 }}
               whileTap={{ scale: 0.95 }}
             >
-              YES, OF COURSE! 🔥😍
+              YES! 🔥😍
             </motion.button>
 
-            {/* RUNAWAY NO BUTTON */}
+            {/* EXPANDED RUNAWAY NO BUTTON */}
             <button
               className={styles.noBtn}
               style={
@@ -114,7 +119,7 @@ export const FunZonePage: React.FC = () => {
                       left: `${noPos.x}px`,
                       top: `${noPos.y}px`,
                     }
-                  : { position: 'relative' }
+                  : { position: 'relative', marginLeft: '25px' }
               }
               onMouseEnter={moveNoButton}
               onTouchStart={moveNoButton}

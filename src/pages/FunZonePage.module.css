@@ -1,43 +1,43 @@
 .container {
   max-width: 900px;
   margin: 0 auto;
-  padding: 40px 20px 80px;
+  padding: 30px 20px 80px;
   text-align: center;
 }
 
 .header {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .title {
-  font-size: 2.5rem;
+  font-size: 2.4rem;
   font-weight: 800;
   color: var(--text-color);
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
+  gap: 10px;
 }
 
 .subtitle {
   color: var(--text-muted);
-  font-size: 1.15rem;
+  font-size: 1.1rem;
 }
 
 .gameCard {
   background: var(--card-bg);
   border: 1px solid var(--border-color);
   border-radius: 28px;
-  padding: 50px 30px;
+  padding: 40px 30px;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.06);
   position: relative;
   overflow: hidden;
-  min-height: 420px;
+  min-height: 480px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .badge {
@@ -46,78 +46,83 @@
   gap: 6px;
   background: rgba(255, 107, 157, 0.12);
   color: #ff477e;
-  padding: 8px 18px;
+  padding: 6px 16px;
   border-radius: 50px;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   font-weight: 700;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .question {
-  font-size: 2.2rem;
+  font-size: 2.1rem;
   font-weight: 800;
   color: var(--text-color);
-  margin-bottom: 16px;
+  margin-bottom: 10px;
   line-height: 1.3;
 }
 
 .subQuestion {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: var(--text-muted);
-  margin-bottom: 45px;
+  margin-bottom: 20px;
 }
 
 .buttonsArea {
   position: relative;
   width: 100%;
-  max-width: 500px;
-  height: 140px;
+  max-width: 750px;
+  height: 280px;
+  border: 2px dashed rgba(255, 107, 157, 0.2);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.4);
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 30px;
+  overflow: hidden;
+  margin: 10px 0;
 }
 
 .yesBtn {
   background: linear-gradient(135deg, #ff477e 0%, #ff70a6 50%, #7000ff 100%);
   color: white;
-  font-size: 1.35rem;
+  font-size: 1.05rem;
   font-weight: 800;
-  padding: 16px 42px;
+  padding: 12px 28px;
   border: none;
   border-radius: 50px;
   cursor: pointer;
-  box-shadow: 0 10px 30px rgba(255, 71, 126, 0.4);
+  box-shadow: 0 8px 25px rgba(255, 71, 126, 0.35);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   z-index: 2;
+  white-space: nowrap;
 }
 
 .yesBtn:hover {
-  transform: scale(1.08) translateY(-2px);
-  box-shadow: 0 15px 40px rgba(255, 71, 126, 0.55);
+  transform: scale(1.06) translateY(-2px);
+  box-shadow: 0 12px 35px rgba(255, 71, 126, 0.5);
 }
 
 .noBtn {
-  background: rgba(120, 120, 128, 0.15);
+  background: rgba(120, 120, 128, 0.12);
   color: var(--text-color);
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   font-weight: 700;
-  padding: 14px 32px;
+  padding: 10px 22px;
   border: 1px solid var(--border-color);
   border-radius: 50px;
   cursor: pointer;
-  transition: top 0.15s ease-out, left 0.15s ease-out;
+  transition: top 0.22s cubic-bezier(0.34, 1.56, 0.64, 1), left 0.22s cubic-bezier(0.34, 1.56, 0.64, 1);
   user-select: none;
   z-index: 10;
   white-space: nowrap;
 }
 
 .attemptsCounter {
-  margin-top: 25px;
-  font-size: 0.95rem;
+  margin-top: 15px;
+  font-size: 0.92rem;
   color: var(--text-muted);
   font-style: italic;
 }
@@ -148,7 +153,7 @@
 }
 
 .trophyHeader {
-  font-size: 4rem;
+  font-size: 3.8rem;
   margin-bottom: 10px;
   animation: bounce 1s infinite alternate;
 }
@@ -159,7 +164,7 @@
 }
 
 .croreAmount {
-  font-size: 3.2rem;
+  font-size: 3rem;
   font-weight: 900;
   background: linear-gradient(135deg, #d4af37 0%, #ffd700 50%, #ff8c00 100%);
   -webkit-background-clip: text;
@@ -169,25 +174,25 @@
 }
 
 .hindiText {
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   font-weight: 800;
   color: #ff477e;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .modalDesc {
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   color: #4a4a4a;
   line-height: 1.6;
-  margin-bottom: 30px;
+  margin-bottom: 28px;
 }
 
 .claimBtn {
   background: linear-gradient(135deg, #ffd700 0%, #ff8c00 100%);
   color: #000;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 800;
-  padding: 16px 36px;
+  padding: 14px 32px;
   border: none;
   border-radius: 50px;
   cursor: pointer;
@@ -199,18 +204,21 @@
 }
 
 .claimBtn:hover {
-  transform: scale(1.06);
+  transform: scale(1.05);
   box-shadow: 0 15px 40px rgba(255, 215, 0, 0.7);
 }
 
 @media (max-width: 600px) {
   .question {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
+  }
+  .buttonsArea {
+    height: 240px;
   }
   .croreAmount {
-    font-size: 2.4rem;
+    font-size: 2.2rem;
   }
   .hindiText {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
 }
