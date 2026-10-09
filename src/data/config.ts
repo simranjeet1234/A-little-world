@@ -217,33 +217,6 @@ export const config: AppConfig = {
       sticker: '🧸',
       tag: 'Warmth',
     },
-    {
-      id: 'mem-10',
-      date: 'Chapter 10',
-      title: 'Laughs & Unforgettable Memories 💖',
-      description: 'Pure joy shared together.',
-      imageUrl: '/images/photo_40.jpg',
-      sticker: '💖',
-      tag: 'Joy',
-    },
-    {
-      id: 'mem-11',
-      date: 'Chapter 11',
-      title: 'Chasing Sunsets & Sky Vistas 🌇',
-      description: 'Capturing magic under open skies.',
-      imageUrl: '/images/photo_41.jpg',
-      sticker: '🌇',
-      tag: 'Skyline',
-    },
-    {
-      id: 'mem-12',
-      date: 'Chapter 12',
-      title: 'Special Chapter ✨',
-      description: 'A glowing memory to hold close forever.',
-      imageUrl: '/images/photo_42.jpg',
-      sticker: '✨',
-      tag: 'Special',
-    },
   ],
 
   // For You messages (/for-you)
@@ -387,7 +360,7 @@ Cheering for you always! 📣⭐`,
 This little digital world was crafted with so much care and love just to bring a big smile to your face.
 
 Never forget how special, appreciated, and loved you are every single day. Thank you for being YOU! 🌈⭐`,
-    revealedImageUrl: '/images/photo_42.jpg',
+    revealedImageUrl: '/images/photo_44.jpg',
   },
 
   // Optional background ambient music path
