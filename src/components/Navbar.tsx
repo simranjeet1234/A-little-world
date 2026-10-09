@@ -16,6 +16,7 @@ export const Navbar: React.FC = () => {
     { path: '/memories', label: 'Memory Lane' },
     { path: '/for-you', label: 'For You' },
     { path: '/secret', label: 'Secret Room 🗝️' },
+    { path: '/fun-zone', label: 'Fun Zone 🎯' },
   ];
 
   return (
